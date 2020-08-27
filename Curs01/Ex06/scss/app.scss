@@ -1,0 +1,52 @@
+// Creaza un mixin care atunci cand este aplicat pe
+//  selectorul unui element (foloseste clasa square)
+//  va creea un patrat de 200px cu bordura neagra de 1px
+//  si fundalul turcoaz
+@mixin square {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border: 1px solid #000000;
+  background-color: turquoise;
+}
+
+@mixin box-bg($bg: blue) {
+  background-color: $bg;
+}
+// mixin-urile nu se translateaza in css
+
+// Aplica o clasa squares pe primul div, seteaza-i latimea
+//  la 80%, o bordura neagra de 1px, si padding de 10px.
+//  Acest div trebuie sa fie centrat.
+.squares {
+  width: 80%;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+// Creeaza in mark-up trei elemente div cu clasa square,
+// fiecare avand una din clasele: square-magenta,
+//  square-peru si square-purple. Folosind mixinurile
+//  create, coloreaza fiecare patrat conform clasei sale
+//   de CSS
+
+.square-magenta {
+  @include square;
+
+  @include box-bg(magenta);
+}
+
+.square-peru {
+  @include square;
+
+  @include box-bg(peru);
+}
+
+.square-purple {
+  @include square;
+
+  @include box-bg(purple);
+}
+
+// daca nu puneam specific bg purple imi baga blue. blue=valoare implicita
