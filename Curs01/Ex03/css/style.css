@@ -1,0 +1,25 @@
+/* tema
+Folosind un media query in CSS centreaza elementul
+pentru toate rezolutiile in afara de cele mai mari de 992
+unde imaginea trebuie sa se intinda pe toata lungimea
+ecra[nului */
+
+.image-p {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+@media (min-width: 300px) {
+  .image-p {
+    display: block;
+    margin: 0 auto;
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .image-p {
+    object-fit: fill;
+    max-width: none;
+  }
+}

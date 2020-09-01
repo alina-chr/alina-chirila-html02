@@ -32,4 +32,63 @@
   background-color: purple;
 }
 
+.circles {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  border: 2px dotted brown;
+  border-radius: 20px;
+}
+
+.circle-red {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid red;
+  background-color: purple;
+  background-color: red;
+}
+
+.circle-green {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid red;
+  background-color: purple;
+  background-color: green;
+}
+
+.circle-blue {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid red;
+  background-color: purple;
+  background-color: blue;
+}
+
+.circles {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid red;
+  background-color: purple;
+  border: 2px solid blue;
+}
+
+.circle-border-blue {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid red;
+  background-color: purple;
+  border: 2px solid blue;
+  background-color: transparent;
+}
+
 /*# sourceMappingURL=style.css.map */

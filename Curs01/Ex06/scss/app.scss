@@ -50,3 +50,75 @@
 }
 
 // daca nu puneam specific bg purple imi baga blue. blue=valoare implicita
+
+// tema:
+// Aplica clasa circles pe urmatorul div, centreaza-l, seteaza-i
+// latimea la 75% si aplica-i o bordura maro, punctata de 2px, colturi rotunijte de 20px
+.circles {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  border: 2px dotted brown;
+  border-radius: 20px;
+}
+
+// Creaza un mixin care atunci cand este aplicat pe selectorul unui
+//  element (foloseste clasa circle) va creea un cerc de 200px cu bordura
+//  rosie de 3px si fundalul mov
+@mixin circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid red;
+  background-color: purple;
+}
+
+// Creeaza un mixin care controleaza fundalul elementului pe care este aplicat
+// folosind parametri.
+
+@mixin circle-bg($bg: blue) {
+  background-color: $bg;
+}
+
+// Creeaza in mark-up trei elemente div cu clasa circle,
+// fiecare avand una din clasele: circle-red, circle-green, circle-blue.
+// Folosind mixinurile create, coloreaza fiecare cerc conform clasei sale de CSS
+.circle-red {
+  @include circle;
+
+  @include circle-bg(red);
+}
+
+.circle-green {
+  @include circle;
+
+  @include circle-bg(green);
+}
+
+.circle-blue {
+  @include circle;
+
+  @include circle-bg(blue);
+}
+
+// Creeaza un mixin (circle-border) care controleaza bordura elementului
+// cu parametrii doar pentru grosime si culoare (bordura sa fie solida
+// mereu: border: $thickness solid $color;) ?color blue??
+@mixin circle-border($thickness: 2px solid, $color: blue) {
+  border: $thickness $color;
+}
+
+// Aplica mixinul nou pe o clasa (circle-border-blue)
+// si aplica-l pe primul cerc astfel incat bordura sa sa iasa in evidenta
+// m-am pierdut putin in cercuri, cred ca am adaugat la exercitiu deja (?)
+.circles {
+  @include circle;
+  @include circle-border;
+}
+
+.circle-border-blue {
+  @include circle;
+  @include circle-border;
+  @include circle-bg(transparent);
+}

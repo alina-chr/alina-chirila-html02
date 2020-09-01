@@ -40,18 +40,12 @@ ul {
   margin: 0 auto;
 }
 
-// Folosind inspectorul,
-//  aplica clasa reverse pe
-//  elementul body, si cand
-//  aceasta este aplicata,
-//  schimba paragrafele
-//   astfel incat para-short sa
-//   fie 100% iar para sa fie 50%
-//   doar pentru paragrafele din
-//   elementele cu clasa paragraphs.
-//    Paragrafele cu clasa para-short vor
-//    avea paddingul de 10px pe verticala
-//     si 20 pe orizontala, iar cele cu
+// Folosind inspectorul,aplica clasa reverse pe
+//  elementul body, si cand aceasta este aplicata,
+//  schimba paragrafele astfel incat para-short sa
+//   fie 100% iar para sa fie 50%   doar pentru paragrafele din
+//   elementele cu clasa paragraphs. Paragrafele cu clasa para-short vor
+//    avea paddingul de 10px pe verticala  si 20 pe orizontala, iar cele cu
 //      clasa para nu vor avea padding.
 
 .paragraphs {
@@ -73,5 +67,41 @@ ul {
       width: 100%;
       padding: 10px 20px;
     }
+  }
+}
+
+// tema:Creeaza trei variabile noi pentru
+// culorile: magenta, lightcoral si pink
+$primary-color: magenta;
+$secondary-color: lightcoral;
+$accent-color: pink;
+// tema: Foloseste-le (variabilele) pentru starile ancorelor din listele ordonate:
+// hover: magenta
+// active: pink
+// visited: lightcoral
+
+ol {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:active {
+      color: $accent-color;
+    }
+    &:visited {
+      color: $accent-color;
+    }
+  }
+}
+
+// tema: Folosind inspectorul aplica o clasa numita all-visited pe lista ordonata.
+// Cand aceasta clasa este pe element, toate ancorele din acesta sa fie taiate (line-through)
+
+a {
+  .all-visited & {
+    text-decoration: line-through;
   }
 }

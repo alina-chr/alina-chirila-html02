@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>Picture & srcset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- tema:
+  Folosind elementul picture cu srcset, afiseaza
+  Imaginea de 300px pana in rezolutii de 600px;
+  Imaginea de 500px pana in rezolutii de 768px;
+  Imaginea de 900px pana in rezolutii de 992px;
+  Imaginea de 1900 pentru alte rezolutii -->
 
- 
+    <picture>
+      <source media="(max-width: 600px)" srcset="images/w300.png" />
 
-  <title>Picture & srcset</title>
-</head>
-<body>
+      <source media="(max-width: 768px)" srcset="images/w500.png" />
 
-</body>
+      <source media="(max-width: 992px)" srcset="images/w900.png" />
+
+      <img class="image-p" src="images/w1900.png" alt="wide image" />
+    </picture>
+  </body>
 </html>
-
