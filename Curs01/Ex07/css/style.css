@@ -1,0 +1,14 @@
+@media (max-width: 500px) {
+  .box-2,
+.box-3 {
+    display: none;
+  }
+}
+@media (min-width: 501px) {
+  .box-2,
+.box-3 {
+    background-color: green;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
