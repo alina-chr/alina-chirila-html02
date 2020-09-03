@@ -9,3 +9,21 @@
   height: 150px;
   border: 1px solid #000;
 }
+
+// Folosind @for si keywordul to genereaza clase de forma box-01 (box-02... box-10)
+//  pentru a stila elementele din primul rand,
+// fiecare clasa trebuie sa ingroase cu 1px bordura elementelor
+// raspuns pt tema ex anterior
+
+@for $i from 1 to 11 {
+  $class-name: '.box;';
+  @if $i < 10 {
+    $class-name: '.box-0#{$i}';
+  } @else {
+    $class-name: '.box-#{$i}';
+  }
+
+  #{$class-name} {
+    border-width: #{$i}px;
+  }
+}

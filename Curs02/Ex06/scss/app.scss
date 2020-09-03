@@ -9,3 +9,25 @@
   height: 150px;
   border: 1px solid #000;
 }
+
+// Folosind @for cu keywordul through, genereaza clase de forma
+// box-1 (box-2, box-3) pentru primele 5 elemente
+//  cu clasa .box din documentul html. La fiecare iteratie,
+//  bordura fiecarui element trebuie sa se ingroase cu un pixel.
+
+@for $i from 1 through 5 {
+  .box-#{$i} {
+    border-width: #{$i}px;
+  }
+}
+
+// In mod similar folosind to, genereaza clase de forma box-01 (box-02)
+//  pentru celelalte 5 element cu clasa .box din document. La fiecare
+//  iteratie, inaltimea si latimea lor trebuie sa creasca cu 5 pixeli.
+@for $i from 1 to 6 {
+  .box-0#{$i} {
+    $width: 150px + ($i * 5);
+    width: $width;
+    height: $width;
+  }
+}

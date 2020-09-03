@@ -1,0 +1,52 @@
+// nu e in enunt
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Creaza un mixin care sa poata genera CSS pentru clase ce vor
+// fi aplicate pentru a randa elemente patrate, cercuri sau romburi
+@mixin shape($shape: 'square') {
+  display: inline-block;
+  border: 1px solid black;
+
+  @if $shape == 'square' {
+  } @else if $shape == 'circle' {
+    border-radius: 50%;
+  } @else {
+    transform: rotate(45deg) skew(20deg, 10deg);
+  }
+}
+
+.square {
+  @include shape('square');
+  @include size(10px, 10px);
+}
+
+.circle {
+  @include shape('circle');
+  @include size(10px, 10px);
+}
+
+.rhombus {
+  @include size(10px, 10px);
+  @include shape('rhombus');
+}
+
+@mixin btn-dir($direction: 'left') {
+  width: 0;
+  height: 0;
+  content: '';
+
+  @if $direction == 'left' {
+    border-top: 3px solid transparent;
+    border-right: 6px solid black;
+    border-bottom: 3px solid transparent;
+  }
+}
+.button-left {
+  &::before {
+    @include btn-dir('left');
+  }
+}

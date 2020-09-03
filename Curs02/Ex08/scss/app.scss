@@ -9,3 +9,16 @@
   height: 150px;
   border: 1px solid #000;
 }
+
+// Pentru primul set de elemente genereaza clase de felul
+//  (b-dotted, b-solid) care vor aplica stilurile specificate
+//  pe element (valorile posibile pt bordura sunt: dotted, solid,
+//  dashed, double si none)
+
+$border-styles: dotted, solid, dashed, double, none;
+
+@each $border-style in $border-styles {
+  .b-#{$border-style} {
+    border-style: $border-style;
+  }
+}

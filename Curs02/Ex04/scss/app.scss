@@ -1,0 +1,27 @@
+// Scrie un mixin numit btn-class care sa genereze clase de CSS pentru butoane.
+//  Acest mixin trebuie sa primeasca parametrii: numele clasei (cu punct),
+//   numele proprietatii care trebuie
+//  generata (color sau background-color) si culoarea care sa se aplice
+$default-color: red;
+
+@mixin btn-class(
+  $class-name: '.my-class',
+  $property: 'color',
+  $color: $default-color
+) {
+  #{$class-name} {
+    #{$property}: $color;
+  }
+}
+
+// Genereaza pentru primul buton o clasa numita btn-primary care
+//  sa genereze culoarea textului mov
+@include btn-class('.btn-primary', 'color', purple);
+
+// Generaza pentru al doilea buton o clasa numita
+//  btn-secondary care sa genereze culoarea textului albastru
+@include btn-class('.btn-secondary', 'color', blue);
+
+// Genereaza pentru al treilea buton o clasa numita btn-inverted care
+//  sa foloseasca pentru fundalul butonului valoarea transparent
+@include btn-class('.btn-inverted', 'background-color', transparent);

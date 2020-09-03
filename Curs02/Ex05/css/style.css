@@ -1,0 +1,33 @@
+.square {
+  display: inline-block;
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+}
+
+.circle {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.rhombus {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 1px solid black;
+  transform: rotate(45deg) skew(20deg, 10deg);
+}
+
+.button-left::before {
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 3px solid transparent;
+  border-right: 6px solid black;
+  border-bottom: 3px solid transparent;
+}
+
+/*# sourceMappingURL=style.css.map */
