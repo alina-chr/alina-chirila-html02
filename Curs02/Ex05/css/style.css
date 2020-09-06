@@ -30,4 +30,31 @@
   border-bottom: 3px solid transparent;
 }
 
+.button-right::before {
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 3px solid transparent;
+  border-left: 6px solid black;
+  border-bottom: 3px solid transparent;
+}
+
+.button-up::before {
+  width: 0;
+  height: 0;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+}
+
+.button-down::before {
+  width: 0;
+  height: 0;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid black;
+}
+
 /*# sourceMappingURL=style.css.map */

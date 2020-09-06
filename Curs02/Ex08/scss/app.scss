@@ -22,3 +22,25 @@ $border-styles: dotted, solid, dashed, double, none;
     border-style: $border-style;
   }
 }
+
+// Pentru al doilea set de elemente genereaza clase
+// de felul (m-xs, m-sm) care vor aplicat marginile respective
+// pe element (valorile sunt: "xs": 4px, "sm": 8px, "md": 16px, "lg": 32px )
+
+$margins: ("xs": 4px, "sm":8px, "md":16px, "lg":32px);
+
+@each $size, $value in $margins {
+  .m-#{$size} {
+    margin: $value;
+  }
+}
+// In mod similar genereaza clase pentru
+//  paddinguri pentru a stila ultimul set de elemente
+
+$paddings: ("xs": 4px, "sm":8px, "md":16px, "lg":32px);
+
+@each $size, $value in $paddings {
+  .p-#{$size} {
+    padding: $value;
+  }
+}

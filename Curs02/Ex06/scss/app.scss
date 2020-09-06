@@ -31,3 +31,21 @@
     height: $width;
   }
 }
+
+// tema
+// La final, genereaza folosind through, pentru ultimul rand de elemente,
+//  clase de felul box-10 (box-20). Elementele din pozitii impare trebuie sa aibe fundalul gri.
+// (foloseste if operatorul modulo @if $i % 2 === 0 -> este par @else -> nu este par
+
+@for $i from 10 through 50 {
+  .box-#{$i} {
+    @if $i % 2 == 0 {
+    } @else {
+      background-color: grey;
+    }
+}
+}
+// nu am nicio clasa para tho. trebuia adaugata?
+// am verificat schimband o clasa in inspector cu nr impar
+// si se schimba bg color in grey
+

@@ -50,3 +50,61 @@
     @include btn-dir('left');
   }
 }
+
+// tema
+// Creaza  un mixin care sa poata fi aplicat pe butoane
+// pentru a genera sageti de tip next/previous/up/down
+
+@mixin btn-dir($direction: 'right') {
+  width: 0;
+  height: 0;
+  content: '';
+
+  @if $direction == 'right' {
+    border-top: 3px solid transparent;
+    border-left: 6px solid black;
+    border-bottom: 3px solid transparent;
+  }
+}
+.button-right {
+  &::before {
+    @include btn-dir('right');
+  }
+}
+
+
+@mixin btn-dir($direction: 'up') {
+  width: 0;
+  height: 0;
+  content: '';
+
+  @if $direction == 'up' {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid black;
+  }
+}
+.button-up {
+  &::before {
+    @include btn-dir('up');
+  }
+}
+
+
+
+@mixin btn-dir($direction: 'down') {
+  width: 0;
+  height: 0;
+  content: '';
+
+  @if $direction == 'down' {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+  }
+}
+.button-down {
+  &::before {
+    @include btn-dir('down');
+  }
+}

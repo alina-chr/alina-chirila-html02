@@ -25,3 +25,30 @@ $default-color: red;
 // Genereaza pentru al treilea buton o clasa numita btn-inverted care
 //  sa foloseasca pentru fundalul butonului valoarea transparent
 @include btn-class('.btn-inverted', 'background-color', transparent);
+
+// Genereaza pentru al patrulea buton o clasa numita btn-inverted-light
+//  care sa foloseasca pentru fundal culoarea lightgray
+
+@include btn-class('.btn-inverted-light', 'background-color', lightgray);
+// Genereaza pentru ultimul buton o clasa  btn-tertiary
+// care sa genereze culoarea textului verde
+@include btn-class('.btn-tertiary', 'color', green);
+
+// Genereaza a clasa numita btn-text-gray care
+// sa genereze culoarea textului gri.
+$default-color:gray;
+
+@mixin btn-text-gray(
+  $class-name: '.my-class',
+  $property: 'color',
+  $color: $default-color
+) {
+  #{$class-name} {
+    #{$property}: $color;
+  }
+}
+
+// Creaza un nou buton care sa aibe clasa btn-inverted si
+//  folosind ambele clase, stileaza acest nou buton
+
+@include btn-text-gray('.btn-inverted' )

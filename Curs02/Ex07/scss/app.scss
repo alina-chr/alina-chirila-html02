@@ -13,7 +13,7 @@
 // Folosind @for si keywordul to genereaza clase de forma box-01 (box-02... box-10)
 //  pentru a stila elementele din primul rand,
 // fiecare clasa trebuie sa ingroase cu 1px bordura elementelor
-// raspuns pt tema ex anterior
+
 
 @for $i from 1 to 11 {
   $class-name: '.box;';
@@ -26,4 +26,24 @@
   #{$class-name} {
     border-width: #{$i}px;
   }
+}
+
+// tema:
+// in mod similar folosind through, genereaza clase pentru randul urmator de elemente,
+// astfel incat elementele din pozitii pare sa aibe fundalul gri iar cele din pozitii
+//  impare sa aibe bordura dotted
+// scoate 0 de la randul 2)
+
+@for $i from 1 to 11 {
+  $class-name: '.box;';
+  @if $i < 11 {
+    $class-name: '.box-#{$i}';
+  }
+
+  #{$class-name} {
+    @if $i % 2 == 0 {
+   background-color: grey; } @else {
+      border-style: dotted;
+    }
+}
 }
