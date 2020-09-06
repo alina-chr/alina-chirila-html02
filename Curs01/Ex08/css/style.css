@@ -24,4 +24,30 @@
   background-color: purple;
 }
 
+.circles {
+  margin: 0 auto;
+  width: 802px;
+  border: 1px solid #000000;
+}
+
+.circle-blue, .circle-green, .circle-red {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: brown;
+  border: 1px solid #000000;
+}
+
+.circle-red {
+  background-color: red;
+}
+
+.circle-green {
+  background-color: green;
+}
+
+.circle-blue {
+  background-color: blue;
+}
+
 /*# sourceMappingURL=style.css.map */

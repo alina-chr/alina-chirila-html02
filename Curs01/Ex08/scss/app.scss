@@ -36,3 +36,43 @@
 
   background-color: purple;
 }
+//  tema
+// Aplica clasa circles pe urmatorul div, centreaza-l, seteaza-i
+// latimea la 802px si aplica-i o bordura neagra solida de 1px
+
+.circles {
+  margin: 0 auto;
+  width: 802px;
+  border: 1px solid #000000;
+}
+
+// Creeaza o clasa circle  (%circle) care sa redea un cerc
+//  de 200px de fundal maro si bordura neagra de 1px
+%circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: brown;
+  border: 1px solid #000000;
+}
+// 8. Creeaza clase circle-red, circle-green, circle-blue care
+// sa seteze culoarea de fundal conform numelor lor si
+//  sa extinda clasa circle
+// 9. Aplica aceste trei clase pe trei elemente div
+// in divul circles
+
+
+.circle-red {
+  @extend %circle;
+
+  background-color: red;
+}
+.circle-green {
+  @extend %circle;
+  background-color: green;
+
+}
+.circle-blue {
+  @extend %circle;
+  background-color: blue;
+}

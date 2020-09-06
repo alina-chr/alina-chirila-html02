@@ -1,0 +1,13 @@
+@mixin box {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+.box-1 {
+  @include box;
+  background-color: aqua;
+}
+.box-2 {
+  @include box;
+  background-color:royalblue;
+}

@@ -94,14 +94,26 @@ ol {
     &:visited {
       color: $accent-color;
     }
+    .all-visited & {
+      text-decoration: line-through;
+    }
   }
 }
 
 // tema: Folosind inspectorul aplica o clasa numita all-visited pe lista ordonata.
-// Cand aceasta clasa este pe element, toate ancorele din acesta sa fie taiate (line-through)
+// Cand aceasta clasa este pe element, toate ancorele din acesta
+//  sa fie taiate (line-through)
 
-a {
-  .all-visited & {
-    text-decoration: line-through;
-  }
-}
+
+// D:aici, pe ancora ai sa ai de fapt .all-visited &
+
+// cu mentiunea ca trebuie pusa clasa pe body, sau mai sus de ol,
+// pentru ca asta va genera.visited ol a iar enuntul e gresit in cazul asta
+
+
+// a {
+//   .all-visited & {
+//     text-decoration: line-through;
+//   }
+// }
+// ^not required

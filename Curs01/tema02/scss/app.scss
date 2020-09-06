@@ -1,0 +1,18 @@
+@mixin box {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+
+@mixin box-bg ($color:aqua) {
+  background-color: $color;
+}
+
+.box-1 {
+  @include box;
+  @include box-bg (aqua);
+}
+.box-2 {
+  @include box;
+  @include box-bg (royalblue);
+}

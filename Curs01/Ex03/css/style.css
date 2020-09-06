@@ -4,7 +4,19 @@ pentru toate rezolutiile in afara de cele mai mari de 992
 unde imaginea trebuie sa se intinda pe toata lungimea
 ecra[nului */
 
-.image-p {
+/* fix: */
+body {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  body {
+    text-align: left;
+  }
+}
+
+
+
+/* .image-p {
   display: block;
   margin: 0 auto;
   max-width: 150px;
@@ -22,4 +34,8 @@ ecra[nului */
     object-fit: fill;
     max-width: none;
   }
-}
+} */
+
+
+
+

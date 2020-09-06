@@ -53,11 +53,12 @@
 
 // tema:
 // Aplica clasa circles pe urmatorul div, centreaza-l, seteaza-i
-// latimea la 75% si aplica-i o bordura maro, punctata de 2px, colturi rotunijte de 20px
+// latimea la 75% si aplica-i o bordura maro, punctata de 2px,
+// colturi rotunijte de 20px
 .circles {
   display: block;
   margin: 0 auto;
-  width: 70%;
+  width: 75%;
   border: 2px dotted brown;
   border-radius: 20px;
 }
@@ -104,21 +105,15 @@
 
 // Creeaza un mixin (circle-border) care controleaza bordura elementului
 // cu parametrii doar pentru grosime si culoare (bordura sa fie solida
-// mereu: border: $thickness solid $color;) ?color blue??
-@mixin circle-border($thickness: 2px solid, $color: blue) {
-  border: $thickness $color;
+// mereu: border: $thickness solid $color;)
+@mixin circle-border($thickness: 2px, $color: blue) {
+  border: $thickness solid $color;
 }
 
 // Aplica mixinul nou pe o clasa (circle-border-blue)
 // si aplica-l pe primul cerc astfel incat bordura sa sa iasa in evidenta
-// m-am pierdut putin in cercuri, cred ca am adaugat la exercitiu deja (?)
-.circles {
-  @include circle;
-  @include circle-border;
-}
+
 
 .circle-border-blue {
-  @include circle;
   @include circle-border;
-  @include circle-bg(transparent);
 }

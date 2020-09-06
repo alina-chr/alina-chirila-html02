@@ -46,8 +46,7 @@ ol a:active {
 ol a:visited {
   color: pink;
 }
-
-.all-visited a {
+.all-visited ol a {
   text-decoration: line-through;
 }
 
