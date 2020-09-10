@@ -14,8 +14,7 @@ $fa-font-path: '/fonts';
 //variabile
 @import './variables';
 
-
 body {
   font-family: Roboto, sans-serif;
-  color: $brand-main;
+  color: $gray-main;
 }
