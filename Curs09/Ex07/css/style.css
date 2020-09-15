@@ -48,3 +48,33 @@ body {
   color: #fff;
 }
 /* do not touch this */
+
+/* Orienteaza cutia 1 intr-o coloana inversata si aliniaza
+central pe orizontala elementele, apoi creste
+elementul 4 folosind flex-grow: 1 si
+ elemetul 2 folosind flex-grow: 2 */
+
+ .flex-container-01 {
+   flex-direction: column-reverse;
+   align-items: center;
+ }
+
+ .flex-container-01 :last-child {
+   flex-grow: 1;
+ }
+
+ .flex-container-01 :nth-child(3) {
+   flex-grow: 2;
+ }
+
+ /* Orienteaza cutia  2 intr-o coloana, aliniaza elementele
+  pe latura din dreapta si creste elementul 1 cu flex-grow: 1 */
+
+  .flex-container-02 {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .flex-container-02 :nth-of-type(2) {
+    flex-grow: 1;
+  }
+

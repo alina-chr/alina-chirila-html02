@@ -57,3 +57,34 @@ body {
   left: 10px;
 }
 /* do not touch this */
+
+/* Orienteaza elementele pe coloana inversata, pozitioneaza-le
+ in dreapta sus apoi seteaza flex-shrink: 2 pe primul element  */
+
+ .flex-container-01 {
+   flex-direction: column-reverse;
+   justify-content: flex-end;
+   align-items: flex-end;
+ }
+
+ .flex-container-01 :nth-child(2) {
+   flex-shrink: 2;
+ }
+
+ /* Orienteaza elementele pe coloana, pozitioneaza-le centrat
+  orizontal cu primul si ultimul element pe laturile
+ superioara si inferioara apoi seteaza pe
+  elementul 1 flex-shrink: 2 si pe elementul 4 flex-shrink: 3 */
+
+.flex-container-02 {
+  flex-direction: column-reverse;
+justify-content: space-between;
+align-items: center;
+}
+
+.flex-container-02 :nth-of-type(2) {
+  flex-shrink: 2;
+}
+.flex-container-02 :last-child {
+  flex-shrink: 3;
+}

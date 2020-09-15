@@ -48,3 +48,22 @@ body {
   color: #fff;
 }
 /* do not touch this */
+
+/* Pentru cutia 5, ordoneaza numerele corect si in
+coloana si centreaza-le orizontal si vertical */
+.flex-container-05 {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pentru cutia 6, ordoneaza numerele corect si in coloana si
+centreaza-le pe verticala si aliniaza-le pe latura din dreapta a cutiei
+ */
+.flex-container-06 {
+flex-direction: column-reverse;
+justify-content: center;
+align-items: flex-end;
+}
+
+

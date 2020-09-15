@@ -48,3 +48,23 @@ body {
   color: #fff;
 }
 /* do not touch this */
+
+/* Pentru cutia 5, orienteaza numerele pe coloana aliniaza-le
+ pe latura din dreapta a cutiei cu spatiu egal intre ele pe verticala */
+
+ .flex-container-05 {
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: flex-end;
+
+ }
+
+
+ /* Pentru cutia 6, orienteaza numerele pe
+  coloana si pozitioneaza-le in coltul din stanga sus */
+
+  .flex-container-06 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }

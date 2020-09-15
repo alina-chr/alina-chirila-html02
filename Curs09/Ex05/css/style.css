@@ -48,3 +48,43 @@ body {
   color: #fff;
 }
 /* do not touch this */
+
+/* In cutia 1 orienteaza elementele pe coloana si pozitioneaza-le
+ in coltul din dreapta jos, apoi folosind last-child pozitioneaza
+ ultimul element pe latura din stanga  */
+
+ .flex-container-01 {
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: flex-end;
+ }
+
+ .flex-container-01 :last-child {
+   align-self: flex-start;
+ }
+
+ /* In cutia 2 orienteaza elementele pe coloana si pozitioneaza-le
+ central pe verticala si orizontala apoi folosind nth-of-type
+ muta al 3lea element pe stanga */
+
+ .flex-container-02 {
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ .flex-container-02 :nth-of-type(4) {
+   align-self: flex-start;
+ }
+
+ /* In cutia 3 orienteaza elementele pe coloana, pozitioneaza-le pe latura din
+ stanga a cutiei cu spatiu egal intre ele si intinde elementul trei */
+
+ .flex-container-03 {
+   flex-direction: column;
+   justify-content: space-around;
+ }
+.flex-container-03 .flex-item-03 {
+  align-self: stretch;
+  width: auto;
+  max-width: none;
+}

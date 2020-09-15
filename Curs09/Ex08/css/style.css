@@ -1,7 +1,7 @@
 /* do not touch this */
 .flex-container {
-  width: 85%; 
-  height: 200px; 
+  width: 85%;
+  height: 200px;
   border: 1px solid #000;
   margin: 25px auto;
   display: flex;
@@ -13,40 +13,93 @@
 }
 
 .flex-item {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-basis: 200px;
-  height: 75px; 
-  border: 1px solid red; 
+  height: 75px;
+  border: 1px solid red;
   background-color: #000;
-  color: #fff; 
+  color: #fff;
   font-weight: bold;
   font-size: 22px;
 }
 
 .underlay {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   right: 0;
   background-color: lightblue;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: -1;
   font-size: 150px;
-  font-weight: bold; 
+  font-weight: bold;
   color: #fff;
 }
 
 #shrinker {
   width: 100px;
-  height: 40px; 
+  height: 40px;
   background-color: lightblue;
   position: fixed;
   top: 10px;
   left: 10px;
 }
 /* do not touch this */
+
+/* Pentru cutia 1 aliniaza elementele pe latura inferioara
+ cu distanga egala intre ele,
+ apoi seteaza pentru primul element flex-shrink: 2 */
+
+ .flex-container-01 {
+   align-items: flex-end;
+   justify-content: space-evenly;
+
+ }
+
+ .flex-container-01 :nth-child(2) {
+   flex-shrink: 2;
+ }
+
+/*
+ Pentru cutia 2 inverseaza elementele, aliniaza-le centrat pe verticala
+  cu primul si ultimul element pe laturile din stanga
+ si din dreapta, apoi seteaza
+  flex-shrink: 2 pentru elementul 1 si flex-shrink: 3 pentru elementul 3 */
+
+  .flex-container-02 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-container-02 :nth-child(2) {
+    flex-shrink: 2;
+  }
+
+.flex-container-02 :nth-child(4) {
+  flex-shrink: 3;
+}
+
+/* Pentru cutia 3, pozitioneaza elementele in coltul
+din dreapta jos si seteaza pentru elementul 2
+ flex-shrink: 2 si pentru elementul 4 flex-shrink: 3  */
+
+ .flex-container-03 {
+   justify-content: flex-end;
+   align-items: flex-end;
+ }
+
+ .flex-container-03 :nth-child(3) {
+   flex-shrink: 2;
+ }
+
+ .flex-container-03 :last-child {
+   flex-shrink: 3;
+ }
+/* pot sa-i pun  min-width */
+
