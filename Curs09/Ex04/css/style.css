@@ -81,3 +81,43 @@ intinde elementul patru folosind stretch folosind nth-child */
 .flex-container-03 div:nth-of-type(2) {
   align-self: flex-start;
 }
+
+/* tema */
+
+/* In cutia 4, aliniaza elementele pe latura de jos a cutiei si
+ centrate pe orizontala si
+ aliniaza ultimul element pe centru, folosind last-child
+ */
+.flex-container-04 {
+  justify-content: center;
+  align-items: flex-end;
+}
+.flex-container-04 :last-child {
+  align-self: center;
+}
+
+/* In cutia 5, aliniaza elementele central pe verticala
+ folosind space-between pe orizontala si
+ intinde al treilea element  folosind un selector de id  */
+
+ .flex-container-05 {
+   justify-content: space-between;
+   align-items: center;
+ }
+ #flex-i-03 {
+   align-self: stretch;
+   height: auto;
+ }
+
+ /* In cutia 6, aliniaza elementele in coltul din dreapta sus apoi aliniaza
+  elementul 3 pe latura de jos a cutiei folosind un selector de clasa
+ */
+
+ .flex-container-06 {
+   justify-content: flex-end;
+   align-items: flex-start;
+ }
+ .flex-container-06 .flex-item-03 {
+   align-self: flex-end;
+ }
+/* tema */

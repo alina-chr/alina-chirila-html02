@@ -61,9 +61,49 @@ coloana si centreaza-le orizontal si vertical */
 centreaza-le pe verticala si aliniaza-le pe latura din dreapta a cutiei
  */
 .flex-container-06 {
-flex-direction: column-reverse;
-justify-content: center;
-align-items: flex-end;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 
+/* tema */
+
+/* Pentru cutia 1, ordoneaza numerele corect si in coloana si
+pozitioneaza-le in coltul de dreapta sus */
+
+.flex-container-01 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Pentru cutia 2, ordoneaza numerele corect si in coloana,
+ centreaza-le pe orizontala
+ cu spatiu egal intre ele pe verticala
+ */
+.flex-container-02 {
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+ /* Pentru cutia 3, ordoneaza numerele corect si in coloana si
+  pozitioneaza-le pe latura din stanga a cutiei
+  cu primul si ultimul element lipite de laturile de sus si de jos
+ */
+.flex-container-03 {
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+ /* Pentru cutia 4, ordoneaza numerele corect si in coloana
+  si pozitioneaza-le in coltul din stanga sus
+ */
+.flex-container-04 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+/* tema */

@@ -68,3 +68,43 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  /* tema */
+/*
+  Pentru cutia 1, orienteaza numerele pe coloana
+   si centreaza-le vertical
+   cu spatiu intre ele pe verticala  */
+
+   .flex-container-01 {
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+   }
+
+   /* Pentru cutia 2, orienteaza numerele pe coloana si
+    pozitioneaza-le in coltul din stanga jos  */
+.flex-container-02 {
+  flex-direction: column ;
+  justify-content:flex-end;
+  align-items: flex-start;
+}
+
+/*Pentru cutia 3, orienteaza numerele pe coloana si
+pozitioneaza-le pe latura din stanga a cutiei
+cu primul si ultimul element atingand laturile de sus si de jos
+  */
+  .flex-container-03 {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* Pentru cutia 4, orienteaza numerele pe coloana si
+   centreaza-le vertical si orizontal
+ */
+ .flex-container-04 {
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ }
+  /* tema */

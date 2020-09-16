@@ -88,3 +88,47 @@ body {
   width: auto;
   max-width: none;
 }
+
+/* tema */
+/*
+In cutia 4 orienteaza elementele pe coloana,
+pozitioneaza-le pe latura din dreapta folosind space-between
+si folosind nth-child pozitioneaza ultimul element pe latura din stanga */
+.flex-container-04 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.flex-container-04 :nth-child(5) {
+  align-self: flex-start;
+}
+
+
+/* In cutia 5 orientaza elementele pe coloana,
+ pozitioneaza-le central pe orizontala si cu spatiu intre ele pe verticala,
+  apoi intinde elementul trei
+ */
+ .flex-container-05 {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+ .flex-container-05 :nth-child(4) {
+   align-self: stretch;
+   width: auto;
+   max-width: none;
+ }
+
+ /* In cutia 6 orienteaza elementele pe coloana,
+ pozitioneaza-le in coltul din stanga jos si
+ pozitioneaza elementul 2 pe latura din dreapta a elementului
+ */
+ .flex-container-06 {
+   flex-direction: column;
+  justify-content: flex-end;
+ }
+ .flex-container-06 div:nth-of-type(3) {
+   align-self: flex-end;
+ }
+/* tema */

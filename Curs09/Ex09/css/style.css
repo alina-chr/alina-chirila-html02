@@ -88,3 +88,61 @@ align-items: center;
 .flex-container-02 :last-child {
   flex-shrink: 3;
 }
+
+/* tema */
+/* Orienteaza elementele pe coloana,
+pozitioneaza-le pe latura din stanga
+ cu spatiu egal intre ele si
+ seteaza pe al doilea element flex-shrink: 2
+ */
+.flex-container-03 {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.flex-container-03 :nth-child(3) {
+flex-shrink: 2;
+}
+
+/* Orienteaza elementele pe coloana,
+ centreaza-le vertical si orizontal
+ apoi seteaza pe elementul 2 flex-shrink: 3 si
+ pe elementul 2 flex-shrink: 3
+  (cred ca aici era elementul 3 flex-shrink 2?)
+ */
+ .flex-container-04 {
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+ .flex-container-04 :nth-child(3) {
+   flex-shrink: 3;
+ }
+ .flex-container-04 :nth-child(4) {
+   flex-shrink: 2;
+ }
+ /* Orienteaza elementele pe coloana inversata,
+  pozitioneaza-le pe latura din dreapta cu spatiu egal intre ele
+  apoi seteaza flex-shrink: 2 pe elementul 3  */
+  .flex-container-05 {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+  .flex-container-05 :nth-child(4) {
+    flex-shrink: 2;
+  }
+  /* Orienteaza elementele pe coloana,
+  centreaza-le pe orizontala
+  cu primul si ultimul element pe laturile superioara si inferioara,
+  apoi seteaza flex-shrink: 2 pe elementul 4
+ */
+ .flex-container-06 {
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .flex-container-06 :last-child {
+   flex-shrink: 2;
+ }
+/* tema */

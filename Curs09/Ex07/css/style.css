@@ -78,3 +78,66 @@ elementul 4 folosind flex-grow: 1 si
     flex-grow: 1;
   }
 
+/* tema */
+
+/* Orienteaza cutia 3 intr-o coloana inversata si
+aliniaza elementele pe latura din stanga,
+apoi creste elementul 1 cu flex-grow: 2
+si elementul 3 cu flex-grow: 1
+ */
+
+ .flex-container-03 {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+ }
+ .flex-container-03 :nth-child(2) {
+   flex-grow: 2;
+ }
+ .flex-container-03 :nth-child(4) {
+   flex-grow: 1;
+ }
+
+ /* Orienteaza cutia 1 (aici cred ca era cutia 4?)
+  intr-o coloana,
+ aliniaza elementele pe latura dreapta si
+  intinde elementul 1 cu flex-grow: 1
+ */
+ /* aici e cumva strecurata o eroare in cerinte?
+ e aceeasi ca la pct. 2 */
+
+ .flex-container-04 {
+   flex-direction: column;
+   align-items: flex-end;
+ }
+ .flex-container-04 :nth-child(2) {
+   flex-grow: 1;
+ }
+
+ /* Orienteaza cutia 2 (aici cred ca era cutia 5?) intr-o coloana inversata si
+  aliniaza elementele central pe orizontala apoi
+  creste elementul 2 cu flex-grow: 2 si
+  elementul 3 cu flex-grow: 1
+ */
+
+ .flex-container-05 {
+   flex-direction: column-reverse;
+   align-items: center;
+ }
+ .flex-container-05 :nth-of-type(3) {
+   flex-grow: 2;
+ }
+ .flex-container-05 :nth-of-type(4) {
+  flex-grow: 1;
+ }
+  /* Orienteaza cutia 6 intr-o coloana si
+  \aliniaza elementele pe latura stanga,
+  apoi intinde elementul 4 cu flex-grow: 1
+ */
+.flex-container-06 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flex-container-06 :last-child {
+  flex-grow: 1;
+}
+/* tema */

@@ -46,3 +46,63 @@ proprietatea order, aranjeaza numerele in ordine crescatoare */
 .flex-container-01 :nth-child(2) {
   order: 1;
 }
+
+/* tema */
+/* Pentru cutia 2, aranjeaza numerele in ordine descrescatoare  */
+  .flex-container-02 :nth-child(4) {
+  order: 1;
+  }
+ .flex-container-02 :nth-child(2) {
+  order: 2;
+  }
+  .flex-container-02 :nth-child(3) {
+  order: 3;
+  }
+
+/* Pentru cutia 3, orienteaza randul invers si
+aranjeaza numerele in ordine crescatoare
+ */
+.flex-container-03 {
+  flex-direction: row-reverse;
+}
+.flex-container-03 :nth-child(4) {
+  order: 1;
+}
+
+/* Pentru cutia 4, aranjeaza numerele in ordine crescatoare
+*/
+.flex-container-04 :nth-child(3) {
+  order: -1;
+}
+.flex-container-04 :nth-child(4) {
+order: 1;
+}
+
+/* Pentru cutia 5, orienteaza randul invers
+si aranjeaza numerele in ordine descrescatoare
+ */
+ .flex-container-05 {
+   flex-direction: row-reverse;
+ }
+ .flex-container-05 :nth-child(2){
+  order: 3;
+ }
+ .flex-container-05 :last-child {
+   order: 2;
+ }
+ .flex-container-05 :nth-child(3) {
+   order: 1;
+ }
+
+ /* Pentru cutia 6, aranjeaza numerele in ordine crescatoare
+ */
+ .flex-container-06 :nth-child(2){
+   order: 1;
+ }
+ .flex-container-06 :nth-child(4){
+   order: 2;
+ }
+ .flex-container-06 :nth-child(5){
+   order: 3;
+ }
+  /* tema */

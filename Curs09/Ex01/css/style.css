@@ -66,3 +66,36 @@ centrat cu primul si ultimul element lipite de marginile laterale
  }
 
  /* tema: */
+
+ /* Pentru cutia 4, inverseaza ordinea numerelor
+  si pozitioneaza-le in dreapta sus
+ */
+.flex-container-04 {
+  flex-direction: row-reverse;
+  /* si dea sunt unde trebuie datorita row-reverse, dar: */
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Pentru cutia 5, inverseaza ordinea numerelor si
+pozitioneaza-le pe latura de jos a cutiei
+cu spatiu intre ele  */
+
+.flex-container-05 {
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  /* sau space-between */
+  align-items: flex-end;
+}
+
+/* Pentru cutia 6, inverseaza ordinea numerelor si
+ pozitioneaza-le pe latura de sus a cutiei
+ cu primul si ultimul element lipite de marginile laterale */
+
+ .flex-container-06 {
+   flex-direction: row-reverse;
+   justify-content: space-between;
+   align-items: flex-start;
+ }
+
+ /* tema: */

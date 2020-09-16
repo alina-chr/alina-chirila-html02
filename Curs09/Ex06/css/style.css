@@ -71,11 +71,49 @@ elementul 2 folosind flex-grow: 1 si elementul 4 folosind flex-grow: 2 */
  .flex-container-03 {
    align-items: flex-end;
  }
-
  .flex-container-03 :nth-child(2) {
    flex-grow: 1;
  }
-
  .flex-container-03 :nth-child(4) {
    flex-grow: 2;
  }
+
+ /* tema */
+
+ /* In cutia 4, aliniaza elementele invers
+  central pe verticala
+ si intinde elementul 4 folosind flex-grow: 1 */
+.flex-container-04 {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.flex-container-04 :nth-child(5) {
+  flex-grow: 1;
+}
+
+/* In cutia 5, aliniaza elementele pe latura inferioara a cutiei si
+intinde elementul 2 folosind flex-grow: 1 si
+elementul 3 folosind flex-grow: 2
+ */
+
+ .flex-container-05 {
+  align-items: flex-end;
+ }
+ .flex-container-05 :nth-child(3) {
+   flex-grow: 1;
+ }
+ .flex-container-05 :nth-child(4) {
+   flex-grow: 2;
+ }
+
+ /* In cutia 6, aliniaza elementele invers pe latura inferioara a cutiei
+ si intinde elementul 3 folosind flex-grow: 1
+ */
+ .flex-container-06 {
+   flex-direction: row-reverse;
+   align-items: flex-end;
+ }
+ .flex-container-06 :nth-child(4) {
+   flex-grow: 1;
+ }
+ /* tema */

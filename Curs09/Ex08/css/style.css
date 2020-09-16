@@ -103,3 +103,50 @@ din dreapta jos si seteaza pentru elementul 2
  }
 /* pot sa-i pun  min-width */
 
+/* tema */
+/* Pentru cutia 4, inverseaza elementele,
+pozitioneaza-le in coltul din stanga jos,
+apoi seteaza pentru elementul 3 flex-shrink: 2
+si pentru elementul 2 flex-shrink: 3
+ */
+
+ .flex-container-04 {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+ }
+ .flex-container-04 :nth-of-type(4) {
+   flex-shrink: 2;
+ }
+ .flex-container-04 :nth-of-type(3) {
+  flex-shrink: 3;
+}
+
+/* Pentru cutia 5, pozitioneaza elementele pe latura superioara
+ si centrate pe orizontala,
+ apoi seteaza pe primul element flex-shrink: 2
+ */
+ .flex-container-05 {
+   justify-content: center;
+   align-items: flex-start;
+ }
+ .flex-container-05 :nth-child(2) {
+   flex-shrink: 2;
+ }
+
+ /* Pentru cutia 6, pozitioneaza elementele centrate vertical si
+  cu spatiu egal intre ele apoi seteaza
+  pe elementul 2 flex-shrink:3 si
+  pe elementul 4 flex-shrink: 0 (acesta nu se va micsora)
+ */
+ .flex-container-06 {
+   justify-content: space-evenly;
+   align-items: center;
+ }
+ .flex-container-06 :nth-child(3){
+   flex-shrink: 3;
+ }
+ .flex-container-06 :last-child {
+   flex-shrink: 0;
+ }
+/* tema */
