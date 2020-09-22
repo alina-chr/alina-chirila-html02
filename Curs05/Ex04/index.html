@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
   <title>Bootstrap Grid</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
 </head>
+
 <body>
-
+  <!-- Ordoneaza primul rand astfel incat numerele
+   impare sa fie primele si cele pare sa fie ultimele
+ -->
   <div class="container">
     <div class="row">
-      <div class="col">16</div>
-      <div class="col">1</div>
+      <div class="col order-8">16</div>
+      <div class="col order-first">1</div>
       <div class="col">3</div>
-      <div class="col">23</div>
-      <div class="col">41</div>
-      <div class="col">40</div>
-      <div class="col">8</div>
-      <div class="col">11</div>
-      <div class="col">2</div>
-      <div class="col">321</div>
-      <div class="col">88</div>
-      <div class="col">6</div>
+      <div class="col order-2">23</div>
+      <div class="col order-3">41</div>
+      <div class="col order-9">40</div>
+      <div class="col order-7">8</div>
+      <div class="col order-1">11</div>
+      <div class="col order-5">2</div>
+      <div class="col order-4">321</div>
+      <div class="col order-10">88</div>
+      <div class="col order-6">6</div>
     </div>
   </div>
+  <!-- Ordoneaza al doilea rand astfel
+    incat cuvintele sa fie in ordine -->
 
   <div class="container">
     <div class="row">
-      <div class="col">Third</div>
-      <div class="col">Fourth</div>
-      <div class="col">First</div>
+      <div class="col order-1">Third</div>
+      <div class="col order-3 ">Fourth</div>
+      <div class="col order-first">First</div>
       <div class="col">Second</div>
-      <div class="col">Sixth</div>
-      <div class="col">Third</div>
+      <div class="col order-4">Sixth</div>
+      <div class="col order-2">Third</div>
     </div>
   </div>
 
+  <!-- Ordoneaza al treilea rand astfel incat
+     numerele sa fie in ordine inversa -->
   <div class="container">
     <div class="row">
-      <div class="col">87</div>
-      <div class="col">102</div>
-      <div class="col">3</div>
-      <div class="col">45</div>
+      <div class="col order-1">87</div>
+      <div class="col order-first">102</div>
+      <div class="col order-last">3</div>
+      <div class="col order-2">45</div>
       <div class="col">92</div>
     </div>
   </div>
-
+  <!-- Ordoneaza al patrulea rand astfel
+  incat culorile sa formeze ordinea RGB
+  *aici oare lipsea div-ul cu clasa"row"?
+ -->
   <div class="container">
-    <div class="col afk"></div>
-    <div class="col ott"></div>
-    <div class="col tbp"></div>
+    <div class="row">
+      <div class="afk col order-last"></div>
+      <div class="ott col order-first"></div>
+      <div class="tbp col "></div>
+    </div>
   </div>
+  <!-- ^^ -->
 </body>
+
 </html>

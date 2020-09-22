@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+  >
   <title>Display</title>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  >
   <style>
     .box {
       border: 1px solid #000;
       width: 120px;
       height: 120px;
-      padding: 5px;   
+      padding: 5px;
     }
+
   </style>
 </head>
+
 <body>
-  <div class="box">1</div>
-  <div class="box">2</div>
-  <div class="box">3</div>
-  <div class="box">4</div>
+  <!-- Pe rezolutia cea mai mica cutiile trebuie sa aibe
+     display inline-block iar cutiile 3 si 4 sa nu fie vizibile
+De la rezolutia sm in sus, cutiile 3 si  4 trebuie sa apara ca inline-block
+De la rezolutia md in sus cutiile 1 si 4 trebuie sa dispara
+De la rezolutia lg in sus cutiile 2 si 3 trebuie sa dispara iar 1 si 4 sa reapara
+De la rezolutia xl in sus cutiile vor avea display block
+ -->
+  <div class="box d-xs-inline-block d-md-none d-lg-inline-block d-xl-block">1</div>
+  <div class="box d-xs-inline-block d-lg-none d-xl-block">2</div>
+  <div class="box d-xs-none d-sm-inline-block d-lg-none d-xl-block">3</div>
+  <div class="box d-xs-none d-sm-inline-block d-md-none d-lg-inline-block d-xl-block">4</div>
 </body>
+
 </html>
