@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Row Layouts</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+  >
+</head>
+
+<body>
+  <div class="container mb-4">
+    <div class="row mb-2">
+      <div class="col">
+        <h1>Aliniate folosind Flexbox</h1>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div
+        class="col border border-danger py-1"
+        style="height: 200px;"
+      >
+        <div class="row h-25 justify-content-between">
+          <article class="col-4 bg-dark"></article>
+          <article class="col-4 bg-dark"></article>
+        </div>
+
+        <div class="row h-25 justify-content-center">
+          <article class="col-4 bg-info"></article>
+        </div>
+
+        <div class="row h-25 justify-content-between">
+          <article class="col-4 bg-dark"></article>
+          <article class="col-4 bg-dark"></article>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col border border-warning py-1"
+        style="height: 200px;"
+      >
+        <div class="row h-25 justify-content-center">
+          <div class="col-4 bg-success"></div>
+        </div>
+
+        <div class="row h-25 justify-content-center">
+          <div class="col-4 bg-success"></div>
+        </div>
+
+        <div class="row h-25 justify-content-end">
+          <div class="col-4 bg-success"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col">
+      <h1>Aliniate cu offset</h1>
+    </div>
+  </div>
+
+  <div class="mb-2 row">
+    <div
+      class="col border border-warning py-1"
+      style="height: 200px;"
+    >
+      <div class="h-25 row">
+        <article class="col-4 bg-warning"></article>
+        <article class="col-4 offset-4 bg-warning"></article>
+      </div>
+
+      <div class="h-25 row">
+        <section class="col-4 offset-4 bg-success"></section>
+      </div>
+
+      <div class="h-25 row">
+        <article class="col-4 bg-warning"></article>
+        <article class="col-4 offset-4 bg-warning"></article>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      class="col border border-warning py-1"
+      style="height: 200px;"
+    >
+      <div class="row h-25">
+        <div class="col-4 bg-dark offset-4">
+
+        </div>
+      </div>
+
+      <div class="row h-25">
+        <div class="col-4 bg-dark offset-4">
+
+        </div>
+      </div>
+
+      <div class="row h-25">
+        <div class="col-4 offset-8 bg-dark">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Recepie page</title>
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+  <main class="container">
+    <header class="row">
+      <div class="col">
+        <h1>Formular Reteta</h1>
+      </div>
+    </header>
+    <!-- header-row  -->
+    <form>
+      <div class="row">
+        <div class="col">
+          <h2>Reteta</h2>
+        </div>
+      </div>
+      <section class="row">
+        <div class="col-12 col-md-6">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <label
+                class="input-group-text"
+                for="recipe-name"
+              >
+                Numele Retetei:*
+              </label>
+            </div>
+            <input
+              class="form-control flex-grow-1"
+              type="text"
+              id="recipe-name"
+              name="recipe-name"
+              required
+              placeholder="Numele Retetei*"
+            >
+
+            <button class="btn btn-info">Save</button>
+          </div>
+          <!-- input-group  -->
+
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <label
+                for="description-long"
+                class="input-group-text"
+              >
+                Descriere Lunga:*
+              </label>
+            </div>
+            <textarea
+              name="description-long"
+              id="description-long"
+              cols="30"
+              rows="8"
+              class="form-control"
+              placeholder="Descriere Lunga*"
+              required
+            ></textarea>
+          </div>
+          <!-- input-group  -->
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <label
+                for="description-short"
+                class="input-group-text"
+              >
+                Descriere Scurta:*
+              </label>
+            </div>
+
+            <textarea
+              name="description-short"
+              id="description-short"
+              cols="30"
+              rows="4"
+              class="form-control"
+              placeholder="Descriere Scurta*"
+              required
+            ></textarea>
+          </div>
+          <!-- input-group  -->
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="form-group mb-2">
+            <label for="recipe-image">Imagine Principala:*</label>
+            <input
+              type="file"
+              name="recipe-image"
+              id="recipe-image"
+              class="form-control-file"
+              required
+            >
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <label
+                class="input-group-text"
+                for="author-name"
+              >
+                Autor:*
+              </label>
+            </div>
+            <select
+              name="author-name"
+              id="author-name"
+              class="form-control"
+              required
+            >
+              <option>Bucataru' Sef</option>
+            </select>
+          </div>
+      </section>
+      <!-- recipe-info  -->
+
+      <div class="row">
+        <div class="col">
+          <h2>Autor (optional)</h2>
+        </div>
+      </div>
+
+      <section class="row">
+        <div class="col-12 col-md-6">
+          <div class="custom-control custom-switch text-md-right">
+            <input
+              type="checkbox"
+              name="author-toggle"
+              id="author-toggle"
+              class="custom-control-input"
+            >
+
+            <label
+              for="author-toggle"
+              class="custom-control-label btn p-0"
+            >Adauga Autor</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="col-12 col-md-6">
+
+        </div>
+
+        <div class="col-12 col-md-6">
+          right
+        </div>
+      </section>
+      <!-- recipe-author  -->
+    </form>
+  </main>
+  <!-- container-main  -->
+</body>
+
+</html>
