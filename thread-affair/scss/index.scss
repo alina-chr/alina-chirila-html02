@@ -4,15 +4,22 @@ $fa-font-path: '/fonts';
 @import './../node_modules/@fortawesome/fontawesome-free/scss/brands';
 @import './../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
 @import './../node_modules/@fortawesome/fontawesome-free/scss/solid';
+
 // site fonts
 @import './fonts';
 
-//bootstrap
+// bootstrap
 @import './../node_modules/bootstrap/scss/bootstrap-reboot';
 @import './../node_modules/bootstrap/scss/utilities';
 
-//variabile
+// project reset
+@import './reset';
 @import './variables';
+@import './common';
+
+@import './shared/index';
+@import './homepage/index';
+@import './category/index';
 
 body {
   font-family: Roboto, sans-serif;

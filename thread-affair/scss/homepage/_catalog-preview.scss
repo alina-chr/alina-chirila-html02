@@ -1,0 +1,17 @@
+.catalog-preview {
+  text-align: center;
+
+  header {
+    h1 {
+      text-transform: uppercase;
+      color: $brand-main;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}

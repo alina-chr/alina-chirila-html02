@@ -1,0 +1,15 @@
+.content-main {
+  & > :nth-child(2) {
+    header {
+      display: none;
+    }
+
+    .product-tile {
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+}

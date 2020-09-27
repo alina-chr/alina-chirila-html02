@@ -1,0 +1,45 @@
+.banner-main {
+  background: url('/img/banners/banner-02.jpg') no-repeat center center;
+  background-size: cover;
+  height: 716px;
+  color: $white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 60px;
+
+  h1 {
+    font-size: 49px;
+    line-height: 52px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+  }
+
+  .banner-copy {
+    margin: 40px 0 75px 0;
+
+    p {
+      display: none;
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 auto;
+      width: 75%;
+
+      &:first-child {
+        display: block;
+
+        span {
+          font-size: 24px;
+          display: block;
+        }
+      }
+    }
+  }
+}

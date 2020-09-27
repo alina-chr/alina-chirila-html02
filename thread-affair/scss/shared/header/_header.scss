@@ -1,0 +1,56 @@
+.header {
+  padding-top: 20px;
+
+  .logo {
+    width: 87px;
+    margin: -68px auto 0 auto;
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.header-contact {
+  display: none;
+}
+
+.header-controls {
+  display: flex;
+  justify-content: space-between;
+
+  & > ul {
+    display: flex;
+
+    &:first-child {
+      li {
+        &:first-child {
+          a {
+            color: $brand-main;
+          }
+        }
+      }
+    }
+
+    & > li {
+      &:first-child {
+        padding-right: 14px;
+      }
+    }
+
+    a {
+      color: $gray-main;
+      font-size: 22px;
+    }
+  }
+
+  .user-controls {
+    a {
+      img,
+      :last-child {
+        display: none;
+      }
+    }
+  }
+}
