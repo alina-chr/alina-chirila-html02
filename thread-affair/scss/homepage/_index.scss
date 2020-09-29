@@ -3,3 +3,16 @@
 @import './catalog-preview';
 @import './home-newsletter';
 @import './home-payment';
+
+.content-main {
+  h1 {
+    text-align: center;
+    font-size: 41px;
+    color: $gray-secondary;
+    font-weight: 300;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}

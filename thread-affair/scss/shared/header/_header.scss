@@ -1,7 +1,13 @@
-.header {
+header {
   padding-top: 20px;
+  position: relative;
 
   .logo {
+    @include media-breakpoint-up('md') {
+      width: 150px;
+      margin-top: 0;
+    }
+
     width: 87px;
     margin: -68px auto 0 auto;
     display: block;
@@ -13,10 +19,30 @@
 }
 
 .header-contact {
+  @include media-breakpoint-up('md') {
+    display: block;
+  }
+
   display: none;
+  font-weight: 300;
+
+  a {
+    color: $gray-tertiary;
+  }
+
+  i {
+    color: $brand-main;
+    font-size: 20px;
+  }
 }
 
 .header-controls {
+  @include media-breakpoint-up('md') {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+
   display: flex;
   justify-content: space-between;
 
@@ -24,12 +50,23 @@
     display: flex;
 
     &:first-child {
+      @include media-breakpoint-up('md') {
+        display: none;
+      }
+
       li {
         &:first-child {
           a {
             color: $brand-main;
           }
         }
+      }
+    }
+
+    &:last-child {
+      @include media-breakpoint-up('md') {
+        display: inline-flex;
+        flex-direction: row-reverse;
       }
     }
 
@@ -47,9 +84,30 @@
 
   .user-controls {
     a {
+      @include media-breakpoint-up('md') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
       img,
       :last-child {
+        @include media-breakpoint-up('md') {
+          display: block;
+        }
+
         display: none;
+      }
+
+      :first-child {
+        @include media-breakpoint-up('md') {
+          display: none;
+        }
       }
     }
   }
