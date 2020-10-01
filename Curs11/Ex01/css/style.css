@@ -6,3 +6,24 @@
 }
 /* can't touch this 🔨 */
 
+
+/* 1.In documentul din director, creaza pentru clasa grid-container, un grid
+ care sa aibe cinci coloane.
+
+Prima coloana va avea 150px
+A doua coloana va avea 75px
+A treia coloana va avea 400
+A patra coloana 220
+A cincea coloana 20px
+2.Gridul va avea si 4 randuri
+
+Primul rand va avea 35px
+Al doilea rand va avea 200px
+Al treilea rand va va 150px
+Al patrulea rand va avea 65px
+ */
+ .grid-container {
+   display: grid;
+   grid-template-columns: 150px 75px 400px 220px 20px;
+   grid-template-rows: 35px 200px 150px 65px;
+ }

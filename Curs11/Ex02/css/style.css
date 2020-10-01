@@ -6,3 +6,20 @@
 }
 /* can't touch this 🔨 */
 
+/* In documentul din director creaza un grid cu 4 coloane
+Prima coloana va avea 1fr
+A doua coloana va avea 120px
+A treia coloana va avea 20%
+A patra coloana va avea 2fr
+
+Creaza si trei randuri pentru grid
+Primul rand va avea 25px
+Al doilea rand va avea 200px
+Al treilea rand va avea 110px
+ */
+
+ .grid-container {
+   display: grid;
+   grid-template-columns: 1fr 120px 20% 2fr;
+   grid-template-rows: 25px 200px 110px;
+ }

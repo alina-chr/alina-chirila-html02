@@ -18,3 +18,34 @@
 }
 /* can't touch this 🔨 */
 
+/* In fisierul din director, creaza un grid care sa
+contina patru coloane de 180px si patru randuri de 200px
+
+Intinde elementul 1 intre liniile verticale 1 si 4
+Intinde elementul 2 intre liniile verticale  4 si 5 si liniile orizontale 1 si 3
+Intinde elementul 3 intre liniile verticale 2 si 5 si liniile orizontale 3 si -1
+ */
+
+ .grid-container {
+   display: grid;
+   grid-template-columns: 180px 180px 180px 180px;
+   grid-template-rows: 200px 200px 200px 200px;
+ }
+.grid-item-1{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-item-2{
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.grid-item-3 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: -1;
+}

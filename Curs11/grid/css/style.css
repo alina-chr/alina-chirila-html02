@@ -1,0 +1,20 @@
+.grid-container {
+  width: 100%;
+  height: 450px;
+  max-width: 1290px;
+  margin: 0 auto;
+  background-color: lightseagreen;
+
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) minmax(250px, 300px) minmax(
+      250px,
+      300px
+    );
+  grid-template-rows: auto;
+  justify-content: end;
+  align-content: center;
+}
+
+.grid-container > div {
+  background-color: lightskyblue;
+}

@@ -20,7 +20,38 @@
 .grid-item-4 {
   background-color: lightsalmon;
 }
+
+.grid-item-5 {
+  background-color: bisque;
+}
 /* can't touch this 🔨 */
 
 
 
+/*
+Creaza un grid cu sase coloane dupa cum urmeaza: 120px 1fr 20% 315px 200px 2fr
+Adauga  cinci randuri dupa cum urmeaza: 100px 75px 200px 150px 75px
+Intinde primul element de la prima linie verticala pe 4 celule folosind cuvantul span
+Intinde al doilea element de la liniia verticala -2 la -1 apoi de la linia oriziontala 1 la 4
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 120px 1fr 20% 315px 200px 2fr;
+  grid-template-rows: 100px 75px 200px 150px 75px;
+}
+
+.grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+}
+
+.grid-item-2{
+  grid-column-start: -2;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+/* Intinde al treilea element de la linia verticala 1 la 4 apoi de la linia orizontala 2 la 5
+Intinde al patrulea element de la linia verticala 3 pe 3 celule folosind cuvantul span apoi de la linia orizontala -3 la -1 */

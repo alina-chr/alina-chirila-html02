@@ -18,3 +18,38 @@
   background-color: lightsalmon;
 }
 /* can't touch this 🔨 */
+
+/*
+Creaza un grid cu coloane dupa cum urmeaza: 250px 25px 1fr 10px 1fr 25px si cu randurile: 200px 10px 300px 10px
+Intinde elementul header intre liniile verticale 1 si -1
+Intinde elementul sidebar cu o celula de la linia verticala 1 folosind o singura valoare apoi intre linile orizontale 2 si -1
+Intinde elementul product 1 cu o celula de la linia verticala 3 folosind o singura valoare si de la linia orizontala 3 folosind o singura valoare
+Intinde elementul product 2 cu o celula de la linia verticala 5 folosind o singura valoare si de la linia orizontala 3 folosind o singura valoare
+Adauga in grid un rand  de 300px si apoi alt rand de 10px (
+ */
+
+ .grid-container{
+   display: grid;
+   grid-template-columns: 250px 25px 1fr 10px 1fr 25px;
+   grid-template-rows: 200px 10px 300px 10px 300px 10px;
+ }
+
+ .grid-item-1 {
+   grid-column: 1 / -1;
+ }
+
+ .grid-item-2 {
+   grid-column: 1 / span 1;
+   grid-row: 2 / -1;
+  }
+
+  .grid-item-3 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .grid-item-4 {
+    grid-column: 5 / span 1;
+    grid-row: 3 / span 1;
+  }
+
