@@ -18,15 +18,13 @@
 }
 
 .grid-item-4 {
-  background-color: lightsalmon
+  background-color: lightsalmon;
 }
 
 /* can't touch this 🔨 */
 
-
-
-
-/* Creaza un grid dupa urmatoarea matrice
+/*
+Creaza un grid dupa urmatoarea matrice
 header header header header
 sidebar . content content
 sidebar . content content
@@ -35,25 +33,22 @@ Centreaza acest grid cu un max-width de 1290 si width: 100%
 Folosind proprietatea grid-area asocieaza primul element cu zonele de header
 Asocieaza al doilea element cu zonele de content
 Asociaza al treilea element cu zonele de sidebar
-Asociaza al patrulea element cu zonele de footer
- */
+Asociaza al patrulea element cu zonele de footer */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'sidebar . content content'
+    'sidebar . content content'
+    'footer footer footer footer';
+  max-width: 1290px;
+  width: 100%;
+  margin: 0 auto;
+}
 
- .grid-container {
-   display: grid;
-   grid-template-areas:
-    "header header header header"
-    "sidebar . content content"
-    "sidebar . content content"
-    "footer footer footer footer"
-   ;
-   max-width: 1290px;
-   width: 100%;
-   margin: 0 auto;
- }
-
- .grid-item-1 {
-   grid-area: header;
- }
+.grid-item-1 {
+  grid-area: header;
+}
 
 .grid-item-2 {
   grid-area: content;
@@ -67,38 +62,37 @@ Asociaza al patrulea element cu zonele de footer
   grid-area: footer;
 }
 
-/* Pe rezolutiile mai mici de 768px, specifica zonele de footer si sidebar
- in asa fel incat sidebarul sa se intinda pana jos, respectiv matricea:
+/* Pe rezolutiile mai mici de 768px, specifica zonele
+de footer si sidebar in asa fel incat sidebarul sa
+se intinda pana jos, respectiv matricea:
 header header header header
 sidebar . content content
 sidebar . content content
-sidebar footer footer footer
- */
+sidebar footer footer footer  */
 
- @media (max-width: 767px){
-.grid-container {
-  grid-template-areas:
-  'header header header header'
-  'sidebar . content content'
-  'sidebar . content content'
-  'sidebar footer footer footer'
-  ;
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-areas:
+      'header header header header'
+      'sidebar . content content'
+      'sidebar . content content'
+      'sidebar footer footer footer';
+  }
 }
- }
 
- /* Pe rezolutile mai mici de 520px aseaza zonele pe o singura coloana, astfel incat continutul sa fie deasupra sidebarului, respectiv matricea:
+/* Pe rezolutile mai mici de 520px aseaza
+zonele pe o singura coloana, astfel
+incat continutul sa fie deasupra sidebarului, respectiv matricea:
 header
 content
 sidebar
 footer */
-
-@media (max-width: 520px) {
+@media (max-width: 519px) {
   .grid-container {
     grid-template-areas:
-    'header'
-    'content'
-    'sidebar'
-    'footer'
-    ;
+      'header'
+      'content'
+      'sidebar'
+      'footer';
   }
 }
