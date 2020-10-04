@@ -1,11 +1,11 @@
 /* can't touch this 🔨 */
 body{
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
 .grid-container {
-  width: 100vw; 
+  width: 100vw;
   height: 100vh;
 }
 
@@ -32,3 +32,53 @@ body{
 }
 /* can't touch this 🔨 */
 
+
+
+
+/* Creaza un grid si configureaza coloanele
+dupa cum urmeaza: 120px 10% 1fr 400px 2fr
+Configureaza randurile dupa
+/* dupa cum urmeaza: 2fr 20% 450px 1fr */
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 120px 10% 1fr 400px 2fr;
+  grid-template-rows: 2fr 20% 450px 1fr;
+}
+/*
+Intinde elementul 1 intre liniile verticale 2 si 5
+apoi de la la linia orizontala 1 cu 2 celule folosind span */
+
+.grid-item-1 {
+  grid-column: 2 / 5;
+  grid-row: 1 / span 2;
+}
+
+/* Intinde elementul 2 de la linia verticala 2 cu o celula folosind o singura valoare apoi
+ de la linia orizontala -3 pana la linia -1 */
+
+ .grid-item-2 {
+  grid-column: 2 / span 1;
+  grid-row: -3 / -1;
+ }
+
+ /* Intinde elementul 3 intre liniile verticale 3 si -1 apoi
+ de la linia orizontala 3 cu 2 celule folosind cuvantul span */
+
+ .grid-item-3 {
+  grid-column: 3 / -1;
+  grid-row: 3 / span 2;
+ }
+
+ /*
+Intinde elementul 4 de la linia verticala 2 cu 3 celule folosind cuvantul span apoi
+de la linia orizontala 2 cu 2 celule folosind cuvantul span
+Seteaza pe elementul 4 valoare 0.5 pentru proprietatea opacity
+ */
+
+ .grid-item-4 {
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 2;
+  opacity: 0.5;
+ }

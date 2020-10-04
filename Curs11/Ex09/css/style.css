@@ -36,3 +36,76 @@
 .grid-item-5 {
   grid-column: 1 / span 2;
 }
+
+/* Ordoneaza numerele din fisierele din director
+ */
+
+body :first-child .grid-item-4 {
+  order: 1;
+}
+
+body :first-child .grid-item-2 {
+  order: 2;
+}
+
+body :first-child .grid-item-3 {
+  order: 3;
+}
+
+body :first-child .grid-item-5 {
+  order: 4;
+}
+
+/* /.first grid-container  */
+
+body :nth-child(2) .grid-item-3 {
+  order: 1;
+}
+
+body :nth-child(2) .grid-item-5 {
+  order: 2;
+}
+
+body :nth-child(2) .grid-item-2 {
+  order: 3;
+}
+
+body :nth-child(2) .grid-item-1 {
+  order: 4;
+}
+/* /.second grid-container  */
+
+body :nth-child(3) .grid-item-5 {
+  order: 1;
+}
+
+body :nth-child(3) .grid-item-2 {
+  order: 2;
+}
+
+body :nth-child(3) .grid-item-1 {
+  order: 3;
+}
+
+body :nth-child(3) .grid-item-4 {
+  order: 4;
+}
+/* /.third grid-container  */
+
+
+body :last-child .grid-item-4 {
+  order: 1;
+}
+
+body :nth-child(4) .grid-item-5 {
+  order: 2;
+}
+
+body :nth-child(4) .grid-item-3 {
+  order: 3;
+}
+
+body :nth-child(4) .grid-item-2 {
+  order: 4;
+}
+/* /.fourth grid-container  */

@@ -23,6 +23,77 @@
 
 /* can't touch this 🔨 */
 
+/* Creaza un grid mobile first
+cu max-width: 1290 si width: 100%
+dupa urmatoarea matrice:
+header
+content
+sidebar
+footer
+Folosind proprietatea grid-area asocieaza primul element cu zonele de header
+Asocieaza al doilea element cu zonele de content
+Asociaza al treilea element cu zonele de sidebar
+Asociaza al patrulea element cu zonele de footer
+ */
+ .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'sidebar'
+    'footer';
+  max-width: 1290px;
+  width: 100%;
+
+}
+
+.grid-item-1 {
+  grid-area: header;
+}
+
+.grid-item-2 {
+  grid-area: content;
+}
+
+.grid-item-3 {
+  grid-area: sidebar;
+}
+
+.grid-item-4 {
+  grid-area: footer;
+}
+
+/* Pentru rezolutiile mai mari de 520 inverseaza
+ zona de content cu cea de sidebar
+
+Pentru rezolutiile mai mari de 768
+configureaza gridul dupa urmatorea matrice
+
+header header header
+sidebar . content
+footer footer footer
+Configureaza gridul cu urmatoarele coloane: 320px 25px 1fr
+ */
+
+ @media (min-width: 521px) {
+  .grid-container {
+    grid-template-areas:
+      'header'
+      'sidebar'
+      'content'
+      'footer';
+  }
+}
 
 
-
+@media (min-width: 769px) {
+  .grid-container {
+    grid-template-columns: 320px 25px 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'header header header'
+      'sidebar . content'
+      'footer footer footer'
+;
+  }
+}

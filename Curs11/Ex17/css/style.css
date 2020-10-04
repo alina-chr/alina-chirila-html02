@@ -1,1 +1,52 @@
 
+/* Creaza un grid de 8 pe 8 folosind CSS grid
+Coloreaza folosind grid items cu background lightblue din doua in doua coloane incepand cu prima
+Coloreaza folosind grid items cu background lightgreen din doua in doua randuri incepand cu al doilea
+ */
+
+ .grid-container {
+   display: grid;
+   grid-template-columns: repeat(8, 1fr);
+   grid-template-rows: repeat(8, 1fr);
+ }
+
+
+ .grid-item:nth-of-type(2n+1) {
+  background: lightblue;
+ }
+
+
+ .grid-item:nth-of-type(16n+9) {
+  background: lightgreen;
+ }
+
+
+ /* not sure if this is also required: */
+
+ .grid-item:nth-of-type(16n+10) {
+  background: lightgreen;
+ }
+
+ .grid-item:nth-of-type(16n+11) {
+  background: lightgreen;
+ }
+
+  .grid-item:nth-of-type(16n+12) {
+  background: lightgreen;
+ }
+
+ .grid-item:nth-of-type(16n+13) {
+  background: lightgreen;
+ }
+
+ .grid-item:nth-of-type(16n+14) {
+  background: lightgreen;
+ }
+
+ .grid-item:nth-of-type(16n+15) {
+  background: lightgreen;
+ }
+
+ .grid-item:nth-of-type(16n+16) {
+  background: lightgreen;
+ }

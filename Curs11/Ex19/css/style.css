@@ -1,0 +1,137 @@
+/*
+ In documentul din fisier creaza un grid
+ care sa aibe latimea de 100%
+  si inaltimea de 350px, acest grid
+  sa aibe 3 coloane si 3 randuri de 45px, folosind functia repeat.
+   In coltul din stanga sus si dreapta jos al acestui grid,
+   plaseaza doua elemente cu fundalul lightblue.
+   Pozitioneaza matricea in dreapta jos
+ */
+
+ .grid-container{
+   display: grid;
+   width: 100%;
+   height: 350px;
+   grid-template-columns: repeat(3, 45px);
+   grid-template-rows: repeat(3, 45px);
+   justify-content: end;
+   align-content: end;
+ }
+
+.grid-item:nth-of-type(1){
+background-color: lightblue;
+}
+
+
+.grid-item:nth-of-type(9){
+  background-color: lightblue;
+}
+
+/* Creaza un grid identic si plaseaza
+ matricea centrata vertical si orizontal */
+
+.grid-container-02{
+  display: grid;
+  width: 100%;
+  height: 350px;
+  grid-template-columns: repeat(3, 45px);
+  grid-template-rows: repeat(3, 45px);
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-item:nth-of-type(1){
+background-color: lightblue;
+}
+
+
+.grid-item:nth-of-type(9){
+ background-color: lightblue;
+}
+
+
+/* Creaza un grid identic si plaseaza
+ matricea centrata orizontal
+pe latura inferioara a containerului */
+.grid-container-03{
+  display: grid;
+  width: 100%;
+  height: 350px;
+  grid-template-columns: repeat(3, 45px);
+  grid-template-rows: repeat(3, 45px);
+  justify-content: center;
+  align-content: end;
+}
+
+.grid-item:nth-of-type(1){
+background-color: lightblue;
+}
+
+
+.grid-item:nth-of-type(9){
+ background-color: lightblue;
+}
+
+/* Creaza un grid identic si plaseaza matricea
+ in coltul din stanga sus */
+.grid-container-04{
+  display: grid;
+  width: 100%;
+  height: 350px;
+  grid-template-columns: repeat(3, 45px);
+  grid-template-rows: repeat(3, 45px);
+  justify-content: start;
+  align-content: start;
+}
+
+.grid-item:nth-of-type(1){
+background-color: lightblue;
+}
+
+
+.grid-item:nth-of-type(9){
+ background-color: lightblue;
+}
+
+/* Creaza un grid identic si plaseaza matricea pe latura
+ superioara, centrata orizontal */
+.grid-container-05{
+  display: grid;
+  width: 100%;
+  height: 350px;
+  grid-template-columns: repeat(3, 45px);
+  grid-template-rows: repeat(3, 45px);
+  justify-content: center;
+  align-content: start;
+}
+
+.grid-item:nth-of-type(1){
+background-color: lightblue;
+}
+
+
+.grid-item:nth-of-type(9){
+ background-color: lightblue;
+}
+
+/* Creaza un grid identic si plaseaza matricea pe
+ latura din dreapta, centrata vertical
+ */
+ .grid-container-06{
+  display: grid;
+  width: 100%;
+  height: 350px;
+  grid-template-columns: repeat(3, 45px);
+  grid-template-rows: repeat(3, 45px);
+  justify-content: end;
+  align-content: center;
+}
+
+.grid-item:nth-of-type(1){
+background-color: lightblue;
+}
+
+
+.grid-item:nth-of-type(9){
+ background-color: lightblue;
+}

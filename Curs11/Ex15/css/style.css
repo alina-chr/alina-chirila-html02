@@ -30,3 +30,79 @@
 
 
 
+/* Creaza un grid mobile first
+cu max-width: 1290 si width: 100% dupa urmatoarea matrice:
+
+header
+filters
+content
+footer
+Sidebarul este ascuns pe mobil
+
+Asociaza primul element cu zona header
+Asociaza al doilea element cu zona filters
+Asociaza al treilea element cu zona content
+Asociaza al patrulea element cu zona sidebar
+Asociaza al cincilea element cu zona footer
+ */
+
+ .grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'filters'
+    'content'
+    'sidebar'
+    'footer';
+  max-width: 1290px;
+  width: 100%;
+
+}
+
+.grid-item-1 {
+  grid-area: header;
+}
+
+.grid-item-2 {
+  grid-area: filters;
+}
+
+.grid-item-3 {
+  grid-area: content;
+}
+
+.grid-item-4 {
+  grid-area: sidebar;
+  display: none;
+}
+.grid-item-5 {
+  grid-area: footer;
+}
+
+/* Pentru rezolutiile mai mari de 800 de pixeli,
+configureaza gridul dupa matricea:
+header header header
+sidebar . filters
+sidebar . content
+footer footer footer
+Configureaza gridul cu urmatoarele coloane 400px 10px 1fr
+ */
+
+ @media (min-width: 801px){
+ .grid-container{
+  grid-template-columns: 400px 10px 1fr;
+  grid-template-rows: auto auto auto;
+ grid-template-areas:
+  'header header header'
+  'sidebar . filters'
+  'sidebar . content'
+  'footer footer footer'
+ ;
+ }
+}
+
+@media (min-width: 801px){
+  .grid-item-4 {
+    display: flex;
+  }
+}

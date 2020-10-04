@@ -26,3 +26,80 @@
 }
 /* can't touch this 🔨 */
 
+
+
+ /*  Creaza un grid cu urmatoarele coloane 140px 500px 320px 25%
+Adauga si urmatoarele randuri 120px 80px 120px 120px  90px */
+ .grid-container {
+display: grid;
+grid-template-columns: 140px 500px 320px 25%;
+grid-template-rows: 120px 80px 120px 120px  90px;
+}
+
+/* Intinde elementul 1 de la linia verticala 1 cu 2 celule folosind cuvantul span
+ apoi de la linia orizontala 1 cu 2 celule folosind  */
+
+ .grid-item-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+ }
+ /* Intinde elementul 2 intre linia verticala 1 si linia verticala 4 apoi
+  cu o celula de la linia orizontala 2 folosind o singura valoare
+ */
+
+ .grid-item-2 {
+   grid-column: 1 / 4;
+   grid-row: 2 / span 1 ;
+ }
+
+ /*
+Intinde elementul 4 intre linia verticala 1 si linia verticala 3,
+ apoi de la linia orizontala -3 la -1
+ */
+.grid-item-4 {
+  grid-column: 1 / 3;
+  grid-row: -3 / -1;
+}
+
+/* Intinde elementul 5 de la linia verticala -2 cu o celula folosind o singura valoare
+apoi intre linia orizontala 1 si -1 */
+.grid-item-5 {
+grid-column: -2 / span 1;
+grid-row: 1 / -1;
+}
+
+
+
+ /* Pozitioneaza elementul 1 in coltul din stanga sus
+ */
+ .grid-item-1 {
+  justify-self: start;
+  align-self: start;
+ }
+
+ /*Aliniaza elementul 2 pe latura din stanga
+ */
+ .grid-item-2 {
+  justify-self: start;
+ }
+
+ /* Aliniaza elementul 3 in coltul din dreapta jos */
+ .grid-item-3 {
+  justify-self: end;
+  align-self: end;
+ }
+
+
+ /* Aliniaza elementul 4 centrat pe verticala si orizontala
+ */
+ .grid-item-4 {
+  justify-self: center;
+  align-self: center;
+ }
+
+
+ /* Aliniaza elementul 5 centrat pe orizontala si pe latura de jos  */
+ .grid-item-5 {
+  justify-self: center;
+  align-self: end;
+ }

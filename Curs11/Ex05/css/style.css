@@ -53,5 +53,20 @@ Intinde al doilea element de la liniia verticala -2 la -1 apoi de la linia orizi
   grid-row-end: 4;
 }
 
-/* Intinde al treilea element de la linia verticala 1 la 4 apoi de la linia orizontala 2 la 5
-Intinde al patrulea element de la linia verticala 3 pe 3 celule folosind cuvantul span apoi de la linia orizontala -3 la -1 */
+/* Intinde al treilea element de la linia verticala 1
+/* la 4 apoi de la linia orizontala 2 la 5 */
+
+ .grid-item-3 {
+   grid-column: 1 / 4;
+   grid-row: 2 / 5;
+ }
+
+
+/* Intinde al patrulea element de la linia verticala 3 pe 3 celule folosind
+cuvantul span apoi de la linia orizontala -3 la -1  */
+
+
+.grid-item-4 {
+  grid-column: 3 / span 3 ;
+  grid-row: -3 / -1;
+}

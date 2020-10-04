@@ -6,3 +6,19 @@
 }
 /* can't touch this 🔨 */
 
+/* In documentul din director, creaza un grid cu urmatoarele coloane:
+Prima coloana va avea 250px
+A doua coloana va avea 1fr
+A treia coloana va avea 150px
+
+Creaza si trei randuri pentru grid
+Primul rand va avea 50px
+Al doilea rand va avea 150px
+Al treilea rand va avea 175px
+ */
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: 250px 1fr 150px;
+  grid-template-rows: 50px 150px 175px;
+}

@@ -58,3 +58,13 @@ Aseaza la treilea element in dreapta celulei si aliniat central pe verticala
 
 /* tema: Aseaza al patrulea element in coltul din stanga sus
 Aseaza al cincelea element in coltul din dreapta jos al celulei */
+
+.grid-item-4 {
+  justify-self: start;
+  align-self: start;
+}
+
+.grid-item-5 {
+  justify-self: end;
+  align-self: end;
+}
