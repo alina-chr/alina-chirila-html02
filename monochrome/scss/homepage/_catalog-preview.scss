@@ -1,0 +1,91 @@
+.catalog-preview {
+  text-align: center;
+
+  header {
+    h1 {
+      @include media-breakpoint-up('md') {
+        text-align: center;
+        font-size: 41px;
+        color: $black;
+        font-weight: 300;
+        text-transform: capitalize;
+
+        a {
+          color: $black;
+        }
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      text-transform: uppercase;
+      color: $brand-main;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    & :first-child {
+      @include media-breakpoint-up('md') {
+        display: none;
+      }
+
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid $gray-secondary;
+      color: $gray-main;
+    }
+
+    & :nth-child(2) {
+      @include media-breakpoint-up('md') {
+        display: block;
+      }
+
+      display: none;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .product-tiles {
+    @include media-breakpoint-up('md') {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    display: grid;
+    grid-template-columns: (auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+
+    a {
+      color: $black;
+    }
+
+    .product-tile {
+      &:nth-of-type(3) {
+        @include media-breakpoint-up('md') {
+          display: block;
+        }
+
+        display: none;
+      }
+
+      &:nth-of-type(4) {
+        @include media-breakpoint-up('md') {
+          display: block;
+        }
+
+        display: none;
+      }
+    }
+  }
+}
+
+.catalog-cta {
+  display: block;
+  margin: 0 auto;
+  color: $gray-secondary;
+}

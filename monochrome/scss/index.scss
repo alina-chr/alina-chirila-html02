@@ -11,8 +11,14 @@ $fa-font-path: '/fonts';
 @import './../node_modules/bootstrap/scss/bootstrap-reboot';
 @import './../node_modules/bootstrap/scss/utilities';
 
-//variabile
+//variables
+@import './reset';
 @import './variables';
+@import './common';
+
+@import './shared/index';
+@import './homepage/index';
+@import './category/index';
 
 body {
   font-family: 'Playfair Display', sans-serif;

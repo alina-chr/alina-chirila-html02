@@ -1,0 +1,35 @@
+.banner-main {
+  @include media-breakpoint-up('md') {
+    display: none;
+  }
+
+  background: url('/img/banners/banner-main-mobile-xl.png') no-repeat center
+    center;
+  background-size: cover;
+  height: 177px;
+  color: $white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  position: relative;
+
+  & > div {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 25px;
+
+    a {
+      background-color: $white;
+      padding: 2px 20px;
+      text-transform: uppercase;
+      font-family: 'Roboto';
+      font-size: 13px;
+      color: $black;
+    }
+  }
+}
