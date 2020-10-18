@@ -3,9 +3,10 @@
     background: url('/img/banners/banner_00_monochrome.png') no-repeat center
       center;
     background-size: cover;
-    height: 500px;
-    z-index: -1;
+    height: 520px;
     position: relative;
+    margin-bottom: 20px;
+    display: block;
   }
 
   padding-top: 20px;
@@ -23,14 +24,18 @@
     color: $gray-secondary;
     font-family: 'Roboto';
     font-weight: normal;
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 
 .header-main {
+  @include media-breakpoint-up('md') {
+    margin: 10px 20%;
+  }
+
   display: flex;
   justify-content: space-between;
-  margin: 10px 20px 5px 20px;
+  margin: 10px 5%;
 
   &:first-child {
     @include media-breakpoint-up('md') {
@@ -39,8 +44,8 @@
   }
 
   a {
-    color: $gray-secondary;
-    font-size: 19px;
+    color: $black;
+    font-size: 20px;
   }
 }
 
@@ -58,7 +63,7 @@
   ul {
     li {
       display: inline-block;
-      margin-left: 15px;
+      margin-left: 10px;
     }
   }
 }
@@ -66,7 +71,6 @@
 .header-social-and-contact {
   @include media-breakpoint-up('md') {
     display: block;
-    margin-left: 20%;
 
     .header-social,
     .header-contact {
@@ -90,6 +94,7 @@
 
       a {
         color: $white;
+        font-size: 25px;
       }
 
       i {
@@ -105,6 +110,11 @@
 
     a {
       color: $white;
+      font-size: 25px;
+    }
+
+    & :hover {
+      text-decoration: none;
     }
 
     i {
@@ -116,7 +126,11 @@
 .header-search {
   @include media-breakpoint-up('md') {
     display: block;
-    margin-right: 20%;
+    margin-right: 10px;
+
+    input {
+      font-family: 'Roboto';
+    }
 
     .search-form,
     .high-rez-user-controls {
@@ -127,6 +141,15 @@
     button {
       background-color: transparent;
       border: transparent;
+    }
+
+    i {
+      color: $gray-secondary;
+      font-size: 22px;
+    }
+
+    & :hover {
+      color: $brand-main;
     }
   }
 
@@ -152,75 +175,42 @@
   }
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   background-color: $black;
 
   a {
     color: $white;
     font-size: 25px;
-    margin-left: 20px;
   }
 
-  form {
-    margin-left: 40px;
+  .header-controls {
+    margin-left: 10%;
   }
 }
 
 .header-controls-search {
-  .search-form {
-    font-family: 'Roboto';
-  }
+  margin-right: 10%;
+  margin-left: 15%;
 
   button {
     background-color: transparent;
     border: transparent;
+    position: absolute;
+    left: 310px;
   }
 
   input {
     background-color: transparent;
-    border: transparent;
-    margin-left: 35px;
+    border: 1px solid $gray-secondary;
+    width: 227px;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    margin-top: 5px;
   }
 
   .fa-search {
-    color: $white;
+    color: $gray-secondary;
     font-size: 11px;
   }
-}
-
-.header-navigation {
-  @include media-breakpoint-up('md') {
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    background-color: $black;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    a {
-      text-decoration: none;
-      color: $white;
-
-      &:hover {
-        color: $brand-main;
-      }
-    }
-
-    ul {
-      text-align: center;
-      display: inline-block;
-
-      li {
-        display: inline-block;
-        margin: 4px 25px;
-        padding: 8px 16px;
-      }
-    }
-  }
-
-  display: none;
 }

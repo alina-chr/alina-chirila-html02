@@ -1,0 +1,47 @@
+.header-navigation {
+  @include media-breakpoint-up('md') {
+    display: block;
+
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: $black;
+
+    a {
+      text-decoration: none;
+      letter-spacing: 0.28px;
+      color: $white;
+    }
+
+    nav {
+      display: block;
+      margin: 0 auto;
+      max-width: 1284px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        margin: 0 10% 0 0;
+        padding: 10px 0;
+      }
+
+      & :nth-of-type(6) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  display: none;
+}

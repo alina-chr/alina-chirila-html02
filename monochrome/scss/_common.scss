@@ -1,10 +1,20 @@
 .cont {
   @include media-breakpoint-up('md') {
     max-width: 1284px;
+    margin: 0 auto;
   }
 
   width: 100%;
   max-width: $container-width;
   margin: 0 auto;
   display: block;
+}
+
+.cont-high-rez-o {
+  @include media-breakpoint-up('md') {
+    max-width: 1284px;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+  }
 }

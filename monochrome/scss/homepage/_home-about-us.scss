@@ -1,0 +1,62 @@
+.home-about-us {
+  @include media-breakpoint-up('md') {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    aside {
+      img {
+        width: 630px;
+        height: 630px;
+      }
+    }
+
+    // nu imi place cum arata imaginea redimensionata
+    // aici ma gandeam sa descarc din XD (mobile)
+    // coverul, sa pun in markup imaginea low-res in acelasi aside
+    // si sa le afisez separat. Aici sa apara img-low-res
+    // si display none pe asta de apare aici
+    // si invers pe desktop
+
+    main {
+      h1 {
+        text-align: justify;
+        margin: 10px 0 50px 20%;
+        font-size: 42px;
+      }
+
+      p {
+        text-align: justify;
+        margin: 0 0 0 20%;
+        font-size: 22px;
+        font-family: 'Roboto';
+        margin-bottom: 45px;
+      }
+
+      & :nth-of-type(2) {
+        display: block;
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    margin: 20px 10%;
+    font-size: 18px;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  & :nth-of-type(2) {
+    display: none;
+  }
+
+  img {
+    width: 320px;
+    height: 172px;
+  }
+}

@@ -1,35 +1,82 @@
 .product-tile {
+  @include media-breakpoint-up('md') {
+    margin-bottom: 50px;
+    max-width: 305px;
+  }
+
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
+  max-width: 155px;
+
+  &:nth-of-type(3) {
+    @include media-breakpoint-up('md') {
+      display: block;
+    }
+
+    display: none;
+  }
+
+  &:nth-of-type(4) {
+    @include media-breakpoint-up('md') {
+      display: block;
+    }
+
+    display: none;
+  }
 
   .product-image-container {
     position: relative;
     margin-bottom: 20px;
+    margin-right: 0;
 
     img {
+      @include media-breakpoint-up('md') {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+
       width: 100%;
+      height: 100%;
     }
 
     .product-badge {
+      @include media-breakpoint-up('md') {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        align-items: center;
+        opacity: 0.7;
+      }
+
       position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 60px;
-      height: 60px;
+      top: 5px;
+      right: 5px;
+      width: 40px;
+      height: 25px;
       display: flex;
       justify-content: center;
-      font-size: 30px;
+      font-size: 15px;
       align-items: center;
-      color: $gray-secondary;
       opacity: 0.7;
-      transition: 2s;
 
-      &:hover {
+      i {
+        color: $icon-background;
+
+        text-shadow: -2px -1px 0 $black, 0 -2px 0 $black, 2px -2px 0 $black,
+          -2px 0 0 $black, 2px 0 0 $black, -2px 2px 0 $black, 0 2px 0 $black,
+          2px 2px 0 $black;
+      }
+      // cum e asta? nu ma prind in momentul asta cum ar trebui facut strokeul
+
+      & :hover {
         color: $brand-main;
-
-        i {
-          color: $brand-main;
-        }
+        transition: 2s;
       }
     }
 
@@ -39,22 +86,34 @@
   }
 
   .product-tile-info {
-    margin-bottom: 15px;
+    @include media-breakpoint-up('md') {
+      margin-bottom: 15px;
+    }
+    margin-bottom: 0;
 
     a {
       display: block;
     }
 
     .product-title {
+      @include media-breakpoint-up('md') {
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+
       font-weight: 500;
       color: $black;
-      font-size: 24px;
+      font-size: 16px;
+      text-transform: capitalize;
     }
   }
 
   .product-tile-pricing {
     .product-catalog-price {
-      font-size: 24px;
+      @include media-breakpoint-up('md') {
+        font-size: 24px;
+      }
+      font-size: 15px;
 
       & > span {
         color: $brand-main;
