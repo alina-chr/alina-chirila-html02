@@ -6,7 +6,8 @@
     height: 520px;
     position: relative;
     margin-bottom: 20px;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   padding-top: 20px;
@@ -31,6 +32,9 @@
 .header-main {
   @include media-breakpoint-up('md') {
     margin: 10px 20%;
+    width: $container-width-high-rez;
+    display: flex;
+    justify-content: space-between;
   }
 
   display: flex;

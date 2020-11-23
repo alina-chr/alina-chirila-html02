@@ -1,0 +1,18 @@
+.product-page-navigation {
+  background-color: $gray-main;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    padding: 5px 0;
+  }
+
+  a {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+}

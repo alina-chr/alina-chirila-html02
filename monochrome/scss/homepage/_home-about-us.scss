@@ -4,25 +4,11 @@
     justify-content: space-between;
     margin-bottom: 100px;
 
-    aside {
-      img {
-        width: 630px;
-        height: 630px;
-      }
-    }
-
-    // nu imi place cum arata imaginea redimensionata
-    // aici ma gandeam sa descarc din XD (mobile)
-    // coverul, sa pun in markup imaginea low-res in acelasi aside
-    // si sa le afisez separat. Aici sa apara img-low-res
-    // si display none pe asta de apare aici
-    // si invers pe desktop
-
     main {
       h1 {
         text-align: justify;
         margin: 10px 0 50px 20%;
-        font-size: 42px;
+        font-size: 40px;
       }
 
       p {
@@ -53,10 +39,5 @@
 
   & :nth-of-type(2) {
     display: none;
-  }
-
-  img {
-    width: 320px;
-    height: 172px;
   }
 }

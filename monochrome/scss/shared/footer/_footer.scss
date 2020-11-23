@@ -129,7 +129,7 @@
     }
   }
 
-  .terms-co {
+  .contact-info {
     @include media-breakpoint-up('md') {
       display: none;
     }
@@ -215,9 +215,11 @@
 
     button {
       font-family: 'Roboto';
-      font-size: 15px;
-      padding: 0 10px;
+      font-size: 14px;
+      letter-spacing: 0.48px;
+      padding: 2px 15px;
       margin: 20px auto;
+      border: 1px solid $black;
 
       &:hover {
         transition: 2s;
