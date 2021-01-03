@@ -19,7 +19,7 @@ gulp.task('sass', function () {
     .pipe(
       sassLint({
         configFile: './config/.sass-lint.yml',
-      }),
+      })
     )
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
@@ -29,8 +29,8 @@ gulp.task('sass', function () {
       mode.production(
         sass({
           outputStyle: 'compressed',
-        }),
-      ),
+        })
+      )
     )
     .pipe(rename('style.css'))
     .pipe(maps.write('./'))
@@ -39,22 +39,24 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-  return gulp
-    .src(['./js/**/*.js'])
-    .pipe(
-      eslint({
-        useEslintrc: true,
-        configFile: './config/.eslintrc',
-      }),
-    )
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(concat('app.min.js'))
-    .pipe(mode.production(uglify()))
-    .pipe(mode.production(maps.init()))
-    .pipe(mode.production(maps.write('./')))
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(connect.reload());
+  return (
+    gulp
+      .src(['./node_modules/@glidejs/glide/dist/glide.js', './js/**/*.js'])
+      // .pipe(
+      //   eslint({
+      //     useEslintrc: true,
+      //     configFile: './config/.eslintrc',
+      //   }),
+      // )
+      .pipe(eslint.format())
+      .pipe(eslint.failAfterError())
+      .pipe(concat('app.min.js'))
+      .pipe(mode.production(uglify()))
+      .pipe(mode.production(maps.init()))
+      .pipe(mode.production(maps.write('./')))
+      .pipe(gulp.dest('./dist/js'))
+      .pipe(connect.reload())
+  );
 });
 
 gulp.task('html', function () {
@@ -89,12 +91,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('./dist/fonts'));
 });
 
-
 gulp.task('open', function () {
   return gulp.src('./dist/index.html').pipe(
     open({
       uri: 'http://localhost:8080',
-    }),
+    })
   );
 });
 
@@ -115,8 +116,8 @@ gulp.task(
     'html',
     'img',
     'fonts',
-    gulp.parallel('watch', 'connect', 'open'),
-  ),
+    gulp.parallel('watch', 'connect', 'open')
+  )
 );
 
 gulp.task('build', gulp.series('js', 'sass', 'html', 'img', 'fonts'));
